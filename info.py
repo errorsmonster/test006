@@ -38,6 +38,7 @@ REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '2')) # number of referal count
 REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '1month')
 
 # Admins, Channels & Users
+USERNAME = environ.get("USERNAME", "https://t.me/I_Am_MrAK")
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6072149828').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002044250842').split()] #Channel id for auto indexing ( make sure bot is admin )
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '6072149828').split()]
