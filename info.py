@@ -64,6 +64,8 @@ VERIFY = bool(environ.get('VERIFY', False)) # Verification On ( True ) / Off ( F
 HOWTOVERIFY = environ.get('HOWTOVERIFY', 'https://t.me/') # How to open tutorial link for verification
 
 # Others
+WCHNL = environ.get('WCHNL', 'https://whatsapp.com/channel/0029VaZbVwQGU3BJt3IfFr2Q')
+WRM = environ.get('WRM', 'https://t.me/MrAK_Weekly_Release')
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
 SHORTLINK_API = environ.get('SHORTLINK_API', '5f14184b5d330486d0ebcb32127fdca5b03c8b42')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
