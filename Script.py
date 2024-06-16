@@ -296,7 +296,7 @@ BOT WORKING PROPERLY"""
 
     PURCHASE_TXT = """ꜱᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴘᴀʏᴍᴇɴᴛ ᴍᴇᴛʜᴏᴅ."""
 
-    PREMIUM_TEXT = """
+    PREMIUM_TXT = """
 - ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟᴀɴs - 
 
 - 15ʀs - 1 ᴡᴇᴇᴋ
