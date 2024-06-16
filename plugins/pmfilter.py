@@ -159,20 +159,19 @@ async def next_page(bot, query):
 
         btn.insert(0, 
             [
-                InlineKeyboardButton("⇈ ꜱᴇʟᴇᴄᴛ ᴏᴘᴛɪᴏɴꜱ ʜᴇʀᴇ ⇈", 'reqinfo')
-            ]
-        )
-        btn.insert(0, 
-            [
-                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇ", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("ꜱᴇᴀsᴏɴ",  callback_data=f"seasons#{key}")
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}")
             ]
         )
         btn.insert(0, [
-            InlineKeyboardButton("♨️ ꜱᴇɴᴅ ᴀʟʟ ꜰɪʟᴇꜱ ♨️", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
         ])
-
+        btn.insert(0, [
+            InlineKeyboardButton("𝚆𝚎𝚎𝚔𝚕𝚢 𝚁𝚎𝚕𝚎𝚊𝚜𝚎𝚍 𝙼𝚘𝚟𝚒𝚎𝚜", url=WRM),
+            InlineKeyboardButton('❤️𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url=WCHNL)
+        ])
     else:
         btn = []
         btn.insert(0, 
@@ -1790,6 +1789,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+
+    elif query.data == "buy_premium":
+        btn = [[
+            InlineKeyboardButton('💸 ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ 💸', url=USERNAME)
+        ],[
+            InlineKeyboardButton('🗑 ᴄᴀɴᴄᴇʟ ᴘʀᴇᴍɪᴜᴍ 🗑', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(btn)
+        await query.message.reply_photo(
+            photo=(CODE),
+            caption=script.PREMIUM_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )    
     
   
     elif query.data == "channels":
